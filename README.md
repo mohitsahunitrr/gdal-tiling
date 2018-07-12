@@ -6,7 +6,8 @@ You can run this docker file by
 docker build . -t gdal-tiling
 docker create --name gdal-tiling gdal-tiling
 docker cp <tif file path> gdal-tiling:/home/gdal-tiling/target.tif
-docker start -a gdal-tiling
+docker start gdal-tiling
+docker exec gdal-tiling gdal2tiles.py --srcnodata=0,0,0 --webviewer=none --zoom=16-22 ./target.tif ./tiles
 docker cp gdal-tiling:/home/gdal-tiling/tiles .
 docker stop gdal-tiling
 ```

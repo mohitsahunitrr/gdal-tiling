@@ -19,4 +19,4 @@ However, these commands are complex enough, I also provided shellscripts for the
 ./run.sh <tif file path>
 ```
 
-After you execute `./build.sh` first time, you don't need to execute it repeatedly. What you need is executing `./run.sh`.
+After you execute `./build.sh` first time, you don't need to execute it repeatedly. What you need is executing `./run.sh`. You can also delete container with `./remove.sh`, and run interactive shell by `./interactive.sh`
